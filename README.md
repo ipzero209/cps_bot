@@ -10,7 +10,7 @@ The system you run this script on will need to have Palo Alto Networks v8.0 MIBS
 
 > Sample instructions for Ubuntu/Debian
   1. Download 8.0 (or later) PAN-OS MIBs from https://www.paloaltonetworks.com/documentation/misc/snmp-mibs
-  2. Copy the MIBs as '.xtx' files to the proper location. On Ubuntu/Debian systems this location is /usr/share/mibs
+  2. Copy the MIBs as '.txt' files to the proper location. On Ubuntu/Debian systems this location is /usr/share/mibs
   3. Modify your snmp.conf file to include the PAN MIBs.
     A. snmp.conf file is located at /etc/snmp. If it doesn't exist, you can create it.
     B. Add 'mibs +ALL' to snmp.conf
