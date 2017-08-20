@@ -71,10 +71,17 @@ def findSD(samples):
 
 
 def main():
+    read_string = 'public'
     fw_ip = raw_input("What firewall would you like to poll? ")
-    read_string = raw_input("What is the snmp read string for the firewall \(SNMP version support only at this time\)? ")
+    read_string_input = raw_input("Enter the snmp read string for the firewall \(SNMP version 2c support only at this time\) or press enter "
+                                  "to use the default [public]: ")
     minutes = raw_input("How many minutes would you like to poll? ")
     poll_num = int(minutes) * 6
+
+    # Check for read string input. If there is no input, use the default
+    if read_string_input:
+        read_string = read_string_input
+
 
     # Regex for matching
     match_unsigned = re.compile('Unsigned32')
